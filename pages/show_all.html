@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сведения</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Цвет фона</title>
+    <style>
+        table {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            border-collapse: collapse;
+            color: #686461;
+        }
+        caption {
+            padding: 10px;
+            color: white;
+            background: #8FD4C1;
+            font-size: 18px;
+            text-align: left;
+            font-weight: bold;
+        }
+        th {
+            border-bottom: 3px solid #B9B29F;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+        }
+        tr:nth-child(odd) {
+            background: white;
+        }
+        tr:nth-child(even) {
+            background: #E8E6D1;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Список имеющихся товаров</h1>
+
+<p><a href="/urltable">Добавить товар</a></p>
+<p><a href="/urltable">Изменить количество товара</a></p>
+
+
+<br>
+<form action="" method="post" onsubmit="setTimeout(function() { window.location.reload(); }, 1000)">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Цена</th>
+        </tr>
+        <tr>
+            <th><input type="text" name="id"/></th>
+            <th><input type="number" name="price" min="1"/></th>
+        </tr>
+        <tr >
+            <td align="center" colspan="2"> <input type="submit" value="Найти" style="font-size : 14px; width: 25%; height: 25px;"/></td>
+        </tr>
+    </table>
+
+</form>
+<br>
+{selectResult}
+
+</body>
+
+</html>
